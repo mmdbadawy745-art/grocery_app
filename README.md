@@ -1,3 +1,4 @@
+<img width="1080" height="2400" alt="Screenshot_1787601568" src="https://github.com/user-attachments/assets/b404004d-5b60-41c9-9370-c8c87f9b7e56" />
 # grocery_app
 
 A new Flutter project.
@@ -18,3 +19,5 @@ samples, guidance on mobile development, and a full API reference.
 
 
 <img width="1080" height="2400" alt="Screenshot_1787256550" src="https://github.com/user-attachments/assets/e3988b8f-6f78-4674-b165-bfb4b1a143fe" />
+
+<img width="1080" height="2400" alt="Screenshot_1787601568" src="https://github.com/user-attachments/assets/b536d03d-01ea-4b1e-bc44-d6cb5ec19456" />
