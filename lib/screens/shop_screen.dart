@@ -4,6 +4,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_app/widgets/home_search_field.dart';
 import 'package:grocery_app/widgets/home_slider.dart';
+import 'package:grocery_app/widgets/product_item.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class ShopScreen extends StatelessWidget {
@@ -66,118 +67,15 @@ class ShopScreen extends StatelessWidget {
             ],
           ),
           SizedBox(height: 20,),
-
-          Row(
-            children: [
-              Container(
-                      
-                width: 173,
-                padding: EdgeInsets.only(top: 25,right: 15,left: 15,bottom: 15),
-                decoration: BoxDecoration(
-                  border: Border.all(color: Color(0xffE2E2E2), ),
-                  borderRadius: BorderRadius.circular(18),
-                  
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [ 
-                      Center(child: Image.asset("assets/92f1ea7dcce3b5d06cd1b1418f9b9413 3.png")),
-              
-                      SizedBox(height: 25.26,),
-              
-                      Text("Organic Bananas",style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 16,
-                        color: Color(0xff181725)
-                      ),),
-              
-                      SizedBox(height: 5,),
-              
-                      Text("7pcs, Priceg",style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 14,
-                        color: Color(0xff7C7C7C)
-                      ),),
-              
-                      SizedBox(height: 36.8),
-              
-                        Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "\$4.99",
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                      color: Color(0xff181725),
-                    ),
-                  ),
-                   SizedBox(width: 46.52),
-                   
-                   Image.asset("assets/Group 6813.png",height: 30,width: 30,),
-                ],
-              ),
-              
-              
-                      
-                      ],
-                    ),
-                    ),
-
-                  SizedBox(width: 15.18,),
-                     Container(
-                      
-                width: 173,
-                padding: EdgeInsets.only(top: 25,right: 15,left: 15,bottom: 15),
-                decoration: BoxDecoration(
-                  border: Border.all(color: Color(0xffE2E2E2), ),
-                  borderRadius: BorderRadius.circular(18),
-                  
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [ 
-                      Center(child: Image.asset("assets/pngfuel 1.png")),
-              
-                      SizedBox(height: 25.26,),
-              
-                      Text("Red Apple",style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 16,
-                        color: Color(0xff181725)
-                      ),),
-              
-                      SizedBox(height: 5,),
-              
-                      Text("1kg, Priceg",style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 14,
-                        color: Color(0xff7C7C7C)
-                      ),),
-              
-                      SizedBox(height: 36.8),
-              
-                        Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "\$4.99",
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                      color: Color(0xff181725),
-                    ),
-                  ),
-                   SizedBox(width: 46.52),
-                   
-                   Image.asset("assets/Group 6813.png",height: 30,width: 30,),
-                ],
-              ),
-                      ],
-                    ),
-                    ),
-            ],
-          )
+          
+          SizedBox(height: 270
+          ,child: ListView.separated(itemBuilder: (context, index)=>ProductItem(
+            price: 5.5 +index ,
+          ),
+          scrollDirection: Axis.horizontal,
+          itemCount: 4,
+           separatorBuilder: ( context,  index)=>SizedBox(width: 10,)))
+          
         ],
       ),
     );
