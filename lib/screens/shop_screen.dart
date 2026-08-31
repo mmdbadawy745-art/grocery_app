@@ -69,16 +69,42 @@ class ShopScreen extends StatelessWidget {
           ),
           SizedBox(height: 20,),
           
-          SizedBox(height: 280, 
-          
-          child: ListView.separated(itemBuilder: (context, index)=>ProductItem(
-           
-           product:products[index] ,
+          SizedBox(
+            height: 280,
+            child: ListView.separated(
+              itemBuilder: (context, index) => ProductItem(
+                product: products[index],
+              ),
+              scrollDirection: Axis.horizontal,
+              itemCount: products.length,
+              separatorBuilder: (context, index) => const SizedBox(width: 10),
+            ),
           ),
-          scrollDirection: Axis.horizontal,
-          itemCount: products.length,
-           separatorBuilder: ( context,  index)=>SizedBox(width: 10,)))
-          
+
+          const SizedBox(height: 30),
+
+           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                "Best Selling",
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 24,
+                  color: Color(0xff181725),
+                ),
+              ),
+              const SizedBox(width: 100),
+              const Text(
+                "See all",
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                  color: Color(0xff53B175),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );

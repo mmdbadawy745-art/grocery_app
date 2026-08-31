@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:grocery_app/models/product_model.dart';
 
 class ProductItem extends StatelessWidget {
-   ProductModel product;
+  final ProductModel product;
 
-    ProductItem({super.key,required this.product});
+  const ProductItem({super.key,required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class ProductItem extends StatelessWidget {
                 
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [ 
-                      Center(child: Image.asset(product.image),),
+                      Expanded(child: Center(child: Image.asset(product.image),)),
               
                       SizedBox(height: 25.26,),
               
@@ -31,7 +31,8 @@ class ProductItem extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         fontSize: 16,
                         color: Color(0xff181725)
-                      ),),
+                      ),maxLines: 1,overflow: TextOverflow.ellipsis,
+                      ),
               
                       SizedBox(height: 5,),
               
