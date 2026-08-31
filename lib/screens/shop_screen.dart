@@ -2,6 +2,7 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:grocery_app/models/product_model.dart';
 import 'package:grocery_app/widgets/home_search_field.dart';
 import 'package:grocery_app/widgets/home_slider.dart';
 import 'package:grocery_app/widgets/product_item.dart';
@@ -19,7 +20,7 @@ class ShopScreen extends StatelessWidget {
       child: Column(
         children: [
           Center(
-            child: Image.asset("assets/Group.png",width: 30,height: 30,),
+            child: Image.asset("assets/carrot.png",width: 30,height: 30,),
           ),
           SizedBox(
             height: 7.6,
@@ -68,12 +69,14 @@ class ShopScreen extends StatelessWidget {
           ),
           SizedBox(height: 20,),
           
-          SizedBox(height: 270
-          ,child: ListView.separated(itemBuilder: (context, index)=>ProductItem(
-            price: 5.5 +index ,
+          SizedBox(height: 280, 
+          
+          child: ListView.separated(itemBuilder: (context, index)=>ProductItem(
+           
+           product:products[index] ,
           ),
           scrollDirection: Axis.horizontal,
-          itemCount: 4,
+          itemCount: products.length,
            separatorBuilder: ( context,  index)=>SizedBox(width: 10,)))
           
         ],
@@ -81,5 +84,13 @@ class ShopScreen extends StatelessWidget {
     );
   }
 }
+
+
+List<ProductModel>products=[
+  ProductModel(image: "assets/banana.png", title: "Organic Bananas", des: "7pcs, Priceg", price: 4.99),
+  ProductModel(image: "assets/apple.png", title: "Red Apple", des: "1kg, Priceg", price: 5.25),
+  ProductModel(image: "assets/ginger.png", title: "Organic Ginger", des: "1pcs, Priceg", price: 0.83),
+  ProductModel(image: "assets/pepper.png", title: "Fresh Pepper", des: "1kg, Priceg", price: 1.89)
+];
 
 

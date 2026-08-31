@@ -13,7 +13,7 @@ class LoginHeader extends StatelessWidget {
         SizedBox(
           height: 28.42,
         ),
-        Center(child: Image.asset("assets/Group.png")),
+        Center(child: Image.asset("assets/carrot.png")),
         SizedBox(
           height: 100.21,
         ),
