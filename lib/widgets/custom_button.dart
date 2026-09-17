@@ -9,7 +9,7 @@ class CustomButton extends StatelessWidget {
     return 
        InkWell(
             onTap: () {
-              // ignore: avoid_print
+              
               print("on tap");
             },
             child: Container(

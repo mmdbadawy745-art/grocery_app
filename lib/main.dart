@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/bottom_nav_screen.dart';
+import 'package:grocery_app/screens/cart_screen.dart';
 import 'package:grocery_app/screens/login.dart';
+import 'package:grocery_app/screens/product_details.dart';
 import 'package:grocery_app/screens/signup.dart';
 
 void main() {
